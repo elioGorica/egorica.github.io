@@ -21,7 +21,7 @@ As you walk on the London&#39;s paved streets you see a bustling markets, guild-
 
 Do you want to know what is guild-regulated industries. Choose your path:
 
-[[More about Guilds]]
+[[Guilds]]
 [[No more about Guilds]]</tw-passagedata><tw-passagedata pid="7" name="Trader" tags="" position="525,175" size="100,100">You&#39;ve chosen to be a trader. International trade and diplomacy will be your focus.
 
 You are trader and you are exploring the cobblestone alleys of London in 1556. You are selling fabrics, spices, and oddities. People are joking around and haggling enthusiastically. Street business flourishes in this colorful scene, which captures the vivacious spirit of Tudor commerce and provides a window into that thriving time period 
@@ -32,7 +32,7 @@ You&#39;re in a busy market town. Choose your path:
 (text-colour:yellow)[[International Connections ]]
 (text-colour:yellow)[[Market Challenges and Rivalries]]
 
-</tw-passagedata><tw-passagedata pid="8" name="Observer" tags="" position="875,175" size="100,100">In the Tudor era, trade and markets in England flourished under the reign of Henry VIII (1509-1547). His policies had a profound impact, as he sought to strengthen the nation&#39;s economy and assert royal control over trade. Henry encouraged domestic industries like cloth production, spurring economic growth. His establishment of the Royal Exchange in London facilitated trade, providing a centralized hub for merchants. Additionally, Henry&#39;s break with the Roman Catholic Church and the dissolution of monasteries led to the redistribution of land and wealth, further fueling economic activity. His reign marked a transformative period in Tudor trade, setting the stage for England&#39;s future as a formidable trading nation.
+</tw-passagedata><tw-passagedata pid="8" name="Observer" tags="" position="850,125" size="100,100">In the Tudor era, trade and markets in England flourished under the reign of Henry VIII (1509-1547). His policies had a profound impact, as he sought to strengthen the nation&#39;s economy and assert royal control over trade. Henry encouraged domestic industries like cloth production, spurring economic growth. His establishment of the Royal Exchange in London facilitated trade, providing a centralized hub for merchants. Additionally, Henry&#39;s break with the Roman Catholic Church and the dissolution of monasteries led to the redistribution of land and wealth, further fueling economic activity. His reign marked a transformative period in Tudor trade, setting the stage for England&#39;s future as a formidable trading nation.
 
 (set: $chosenRole to &quot;&quot;)
 (set: $choiceMade to false)
@@ -56,24 +56,36 @@ or
   (else:)[
     (set: $chosenRole to &quot;None&quot;)
   ]
-]</tw-passagedata><tw-passagedata pid="9" name="More about Guilds" tags="" position="200,325" size="100,100">Guild-regulated industries encompassed textiles, metalworking, carpentry, masonry, and various crafts. Guilds, associations of skilled artisans, governed these trades, setting quality standards, controlling prices, and maintaining a monopoly on certain aspects of production and trade.
+]</tw-passagedata><tw-passagedata pid="9" name="Guilds" tags="" position="225,325" size="100,100">Guild-regulated industries encompassed textiles, metalworking, carpentry, masonry, and various crafts. Guilds, associations of skilled artisans, governed these trades, setting quality standards, controlling prices, and maintaining a monopoly on certain aspects of production and trade.
+
+(set: $playerName to &quot;Elio&quot;)
+
+(print: &quot;What&#39;s your name?&quot;)
+(prompt: &quot;Enter your name&quot;, &quot;Your Name&quot;)[(set: $playerName to it)]
+
+Are you interested in joining a guild or pursuing a craft, [($playerName)]?
+
+[[Yes, I&#39;m interested in crafts and guilds]]
+[[No, I&#39;m not interested]]
+
+
 
 (text-colour:red)[To learn more, please the following video on how the medieval guilds started and how did the function]
 
 &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/xLyTBPKkba0?si=sFGm_Q-kmaXvPKW9&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; allowfullscreen&gt;&lt;/iframe&gt;</tw-passagedata><tw-passagedata pid="10" name="No more about Guilds" tags="" position="150,200" size="100,100">Ok, you are missing a very funny and important concept of that time!
-You can still go back to [[More about Guilds]] </tw-passagedata><tw-passagedata pid="11" name="Famous market courts" tags="" position="400,325" size="100,100">You find yourself in a busy market town, filled with stalls, vibrant colors, and animated voices. As you wander through the streets, you come across two distinctive market areas. Which path will you take?
+You can still go back to [[Guilds]] </tw-passagedata><tw-passagedata pid="11" name="Famous market courts" tags="" position="400,325" size="100,100">You find yourself in a busy market town, filled with stalls, vibrant colors, and animated voices. As you wander through the streets, you come across two distinctive market areas. Which path will you take?
 
 (set: $chosenPath to &quot;&quot;)
 (set: $choiceMade to false)
 
 You explore Stall Alley, a vibrant open-air marketplace. Select your next move:
-[[Stall Alley]]:
+(text-colour:red)[[Stall Alley]]:
 (link: &quot;Select this option&quot;)[
   (set: $choiceMade to true)
   (set: $chosenPath to &quot;Stall Alley&quot;)
 ]
 
-[[Merchant Court]]:
+(text-colour:red)[[Merchant Court]]:
 (link: &quot;Select this option&quot;)[
   (set: $choiceMade to true)
   (set: $chosenPath to &quot;Merchant Court&quot;)
@@ -118,19 +130,47 @@ Choose your next adventure:
 (text-colour:orange)[[The Wool Trade]]
 (text-colour:orange)[[International Connections]]
 
-&lt;a href=&quot;https://imgflip.com/i/829xgp&quot;&gt;&lt;img src=&quot;https://i.imgflip.com/829xgp.jpg&quot; title=&quot;made at imgflip.com&quot;/&gt;&lt;/a&gt;&lt;div&gt;&lt;a href=&quot;https://imgflip.com/memegenerator&quot;&gt;from Imgflip Meme Generator&lt;/a&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="15" name="Merchant Court" tags="" position="450,475" size="100,100">If you think you could trade goods at marchent court, you better choose Stall Alley for that reason. During the Tudor era in England (1485-1603), a merchant court referred to a legal institution where commercial matters and disputes related to trade and commerce were addressed. These courts were established in various towns and cities and were responsible for handling cases involving merchants, traders, and business transactions. They played a significant role in regulating and resolving disputes related to trade, contracts, debts, and other commercial issues. Merchant courts aimed to provide a structured and consistent framework for resolving commercial conflicts and ensuring that trade activities could be conducted with a degree of legal certainty.
+&lt;a href=&quot;https://imgflip.com/i/829xgp&quot;&gt;&lt;img src=&quot;https://i.imgflip.com/829xgp.jpg&quot; title=&quot;made at imgflip.com&quot;/&gt;&lt;/a&gt;&lt;div&gt;&lt;a href=&quot;https://imgflip.com/memegenerator&quot;&gt;from Imgflip Meme Generator&lt;/a&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="15" name="Merchant Court" tags="" position="450,475" size="100,100">Welcome to Merchant&#39;s Court in the Tudor era! What&#39;s your name?
+(prompt: &quot;Enter your name&quot;, &quot;Your Name&quot;)[(set: $playerName to it)]
+
+(set: $chooseStallAlley to false)
+
+If you think you could trade goods at Merchant&#39;s Court, you better choose Stall Alley for that reason. During the Tudor era in England (1485-1603), a merchant court referred to a legal institution where commercial matters and disputes related to trade and commerce were addressed. These courts were established in various towns and cities and were responsible for handling cases involving merchants, traders, and business transactions. They played a significant role in regulating and resolving disputes related to trade, contracts, debts, and other commercial issues. Merchant courts aimed to provide a structured and consistent framework for resolving commercial conflicts and ensuring that trade activities could be conducted with a degree of legal certainty.
+
+Is Merchant&#39;s Court where you want to be today, [($playerName)]?
+[Yes, I want to explore Merchant&#39;s Court]-&gt;[[ExploreMerchantCourt]]
+[No, I&#39;ll choose Stall Alley] -&gt; (link: &quot;Go to Stall Alley&quot;)[
+  (go-to: &quot;Stall Alley&quot;)
+]
 
 (text-colour:red)[A preserved part of merchant court in England] 
 
 (image source - https://www.britainexpress.com/
 
-&lt;a href=&quot;https://imgflip.com/i/82a1xb&quot;&gt;&lt;img src=&quot;https://i.imgflip.com/82a1xb.jpg&quot; title=&quot;made at imgflip.com&quot;/&gt;&lt;/a&gt;&lt;div&gt;&lt;a href=&quot;https://imgflip.com/memegenerator&quot;&gt;from Imgflip Meme Generator&lt;/a&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="16" name="Voyage to the New World" tags="" position="587.5,425" size="100,100">During Henry VIII&#39;s reign in the Tudor era, England embarked on exploratory voyages to the New World. In 1497, John Cabot, an Italian explorer sailing under the English flag, set sail on the ship &quot;Matthew.&quot; On this voyage, Cabot is said to have reached Newfoundland, Canada. A humorous twist to this expedition is that Cabot mistakenly believed he had discovered Asia, leading to the misconception that Canada was part of Asia for several years. This early exploration marked the beginning of England&#39;s engagement in the age of New World discovery and expansion.
+&lt;a href=&quot;https://imgflip.com/i/82a1xb&quot;&gt;&lt;img src=&quot;https://i.imgflip.com/82a1xb.jpg&quot; title=&quot;made at imgflip.com&quot;/&gt;&lt;/a&gt;&lt;div&gt;&lt;a href=&quot;https://imgflip.com/memegenerator&quot;&gt;from Imgflip Meme Generator&lt;/a&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="16" name="Voyage to the New World" tags="" position="587.5,425" size="100,100">During Henry VIII&#39;s reign in the Tudor era, England embarked on exploratory voyages to the New World. In 1497, John Cabot, an Italian explorer sailing under the English flag, set sail on the ship &quot;Matthew.&quot; On this voyage, Cabot is said to have reached Newfoundland, Canada. A humorous twist to this expedition is that Cabot mistakenly believed he had discovered Asia, leading to the misconception that Canada was part of Asia for several years. This early exploration marked the beginning of England&#39;s engagement in the age of New World discovery and expansion. A merchant vessel named the Mayflower set sail for the New World on September 16, 1620, departing from England. There were 102 men, women, and children on board; half of them—known today as the &quot;Saints&quot; or &quot;Pilgrims&quot;—were fleeing religious persecution, while the other half—referred to as the &quot;Strangers&quot;—were traveling across the Atlantic in search of adventure and a new start.
 
-A merchant vessel named the Mayflower set sail for the New World on September 16, 1620, departing from England. There were 102 men, women, and children on board; half of them—known today as the &quot;Saints&quot; or &quot;Pilgrims&quot;—were fleeing religious persecution, while the other half—referred to as the &quot;Strangers&quot;—were traveling across the Atlantic in search of adventure and a new start.
+What&#39;s your name?
+(prompt: &quot;Enter your name&quot;, &quot;Your Name&quot;)[
+    (set: $playerName to it)
+    (set: $chosenVoyage to &quot;Cabot&quot;)
+    (go-to: &quot;ChooseVoyage&quot;)
+]
+[[ChooseVoyage]]
+
 
 (picture source - gettyimages.com)
 
-&lt;a href=&quot;https://imgflip.com/i/829zag&quot;&gt;&lt;img src=&quot;https://i.imgflip.com/829zag.jpg&quot; title=&quot;made at imgflip.com&quot;/&gt;&lt;/a&gt;&lt;div&gt;&lt;a href=&quot;https://imgflip.com/memegenerator&quot;&gt;from Imgflip Meme Generator&lt;/a&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="17" name="Strategic Partnerships" tags="" position="850,400" size="100,100">During the Tudor era, Henry VIII sought strategic trade partnerships, notably with the Netherlands. In 1496, he negotiated the &quot;Intercursus Magnus,&quot; a treaty allowing English merchants access to Flemish markets. A quirky detail is that Henry&#39;s negotiation strategy included sending an envoy with a dancing bear to entertain the Dutch court, emphasizing the value of their alliance. This treaty boosted England&#39;s woolen cloth trade, strengthening their economic ties. However, Henry&#39;s son, Edward VI, later revoked the treaty, illustrating the volatile nature of Tudor-era trade agreements.</tw-passagedata><tw-passagedata pid="18" name="Buyer" tags="" position="937.5,550" size="100,100">It is a Sunday in the year 1550, the Tudor era, and I&#39;m wandering through the streets of Stall Alley. Traders are grabbing my arm eagerly and shouting loudly to get my attention. They would fling their items in front of me, competing for my attention, fervently haggling, and generating a vibrant, busy atmosphere that engulfed you in the midst of trade.
+&lt;a href=&quot;https://imgflip.com/i/829zag&quot;&gt;&lt;img src=&quot;https://i.imgflip.com/829zag.jpg&quot; title=&quot;made at imgflip.com&quot;/&gt;&lt;/a&gt;&lt;div&gt;&lt;a href=&quot;https://imgflip.com/memegenerator&quot;&gt;from Imgflip Meme Generator&lt;/a&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="17" name="Strategic Partnerships" tags="" position="850,400" size="100,100">During the Tudor era, Henry VIII sought strategic trade partnerships, notably with the Netherlands. In 1496, he negotiated the &quot;Intercursus Magnus,&quot; a treaty allowing English merchants access to Flemish markets. A quirky detail is that Henry&#39;s negotiation strategy included sending an envoy with a dancing bear to entertain the Dutch court, emphasizing the value of their alliance. This treaty boosted England&#39;s woolen cloth trade, strengthening their economic ties. However, Henry&#39;s son, Edward VI, later revoked the treaty, illustrating the volatile nature of Tudor-era trade agreements.</tw-passagedata><tw-passagedata pid="18" name="Buyer" tags="" position="1000,425" size="100,100">It is a Sunday in the year 1550, the Tudor era, and you&#39;re wandering through the streets of Stall Alley. Traders are grabbing your arm eagerly and shouting loudly to get your attention. They fling their items in front of you, competing for your attention, fervently haggling, and generating a vibrant, busy atmosphere that engulfs you in the midst of trade.
+
+(set: $interestedInJewelry to false)
+(set: $purchaseMade to false)
+
+Are you interested in jewelry?
+[[Yes, I&#39;m interested in jewelry-&gt;InterestedInJewelry]]
+[[No, I&#39;m not interested-&gt;NotInterested]]
+
+
+
 
 (text-colour:red)[A normal market day in Mary Street, London] (picture source -https://voicemap.me/)
 
@@ -138,7 +178,15 @@ A merchant vessel named the Mayflower set sail for the New World on September 16
 
  
 
-</tw-passagedata><tw-passagedata pid="20" name="International Connections" tags="" position="350,625" size="100,100">During the Tudor era, England established vital international connections. Transatlantic voyages in the early 16th century led to newfound lands and lucrative trade prospects. Adventurers explored the Americas, seeking riches and uncharted territories. Strategic partnerships with influential merchants and overseas enterprises offered opportunities for growth and prosperity. This era witnessed the rise of the powerful Hanseatic League and flourishing local trade guilds. These associations played a pivotal role in market dynamics, facilitating the exchange of goods, knowledge, and resources. The Tudor era marked a period of dynamic international engagement, setting the stage for England&#39;s future as a global trading and maritime power.</tw-passagedata><tw-passagedata pid="21" name="Trade Battles" tags="" position="662.5,550" size="100,100">During the Tudor era, King Henry VIII found himself embroiled in intriguing trade legal battles. In 1527, he quarreled with the Hanseatic League, a powerful trading alliance, over customs duties. The dispute escalated, leading to the &quot;Battle of the Beerhouse&quot; in 1537, where English officials seized a Hanseatic merchant&#39;s goods, including beer, sparking a humorous brawl. Furthermore, Henry&#39;s &quot;Cloth of Gold&quot; summit with France in 1520 showcased England&#39;s textile prowess, promoting its woolen industry while humorously overshadowing French silk. These legal skirmishes and diplomatic antics demonstrated Henry&#39;s quest for trade dominance during his colorful reign.</tw-passagedata><tw-passagedata pid="22" name="Sabotage and Espionage" tags="" position="787.5,550" size="100,100">
+</tw-passagedata><tw-passagedata pid="20" name="International Connections" tags="" position="350,625" size="100,100">During the Tudor era, England established vital international connections. Transatlantic voyages in the early 16th century led to newfound lands and lucrative trade prospects. Adventurers explored the Americas, seeking riches and uncharted territories. Strategic partnerships with influential merchants and overseas enterprises offered opportunities for growth and prosperity. This era witnessed the rise of the powerful Hanseatic League and flourishing local trade guilds. These associations played a pivotal role in market dynamics, facilitating the exchange of goods, knowledge, and resources. The Tudor era marked a period of dynamic international engagement, setting the stage for England&#39;s future as a global trading and maritime power.</tw-passagedata><tw-passagedata pid="21" name="Trade Battles" tags="" position="675,550" size="100,100">During the Tudor era, King Henry VIII found himself embroiled in intriguing trade legal battles. In 1527, he quarreled with the Hanseatic League, a powerful trading alliance, over customs duties. The dispute escalated, leading to the &quot;Battle of the Beerhouse&quot; in 1537, where English officials seized a Hanseatic merchant&#39;s goods, including beer, sparking a humorous brawl. Furthermore, Henry&#39;s &quot;Cloth of Gold&quot; summit with France in 1520 showcased England&#39;s textile prowess, promoting its woolen industry while humorously overshadowing French silk. These legal skirmishes and diplomatic antics demonstrated Henry&#39;s quest for trade dominance during his colorful reign.
+
+(set: $tradeDisputeResolved to false)
+(set: $promoteTextile to false)
+
+What aspect of these trade battles do you want to explore?
+(text-colour:yellow)[[Hanseatic League Dispute]]
+(text-colour:yellow)[[Cloth of Gold Summit]]
+(text-colour:yellow)[[Skip and continue]]</tw-passagedata><tw-passagedata pid="22" name="Sabotage and Espionage" tags="" position="787.5,550" size="100,100">
 During the Tudor era, spanning the 16th century, King Henry VIII engaged in trade sabotage and espionage to protect and strengthen England&#39;s economy. In the early 1500s, Henry imposed heavy customs duties on the Hanseatic League, a powerful trade consortium, leading to tensions and trade disruptions. Additionally, in 1525, Henry launched the &quot;Bailiff of Yarmouth&quot; espionage operation, dispatching agents to gather intelligence on foreign merchants and their activities, aiming to safeguard English trade interests. These actions reflected his commitment to boosting domestic industries and enhancing England&#39;s economic self-sufficiency.
 
 (set: $chosenPath to &quot;&quot;)
@@ -162,7 +210,58 @@ Would you be part of the Hanseatic League or be part of the Bailiff of Yarmouth?
     (set: $chosenPath to &quot;None&quot;)
   ]
 ]
-</tw-passagedata><tw-passagedata pid="23" name="Hanseatic League" tags="" position="850,675" size="100,100">If you would chose to be part of the Hanseatic League you need to know that this organization was a powerful medieval commercial and defensive confederation formed by merchant guilds and towns in Northern Europe. Active from the 13th to the 17th century, it facilitated trade, established trade routes, and protected members&#39; interests. The league played a significant role in the economic and political history of the region. It included cities from what are now modern-day Germany, the Netherlands, Sweden, Denmark, Norway, and other northern European areas. It was not associated with or based in Britain</tw-passagedata><tw-passagedata pid="24" name="Bailiff of Yarmouth" tags="" position="975,675" size="100,100">An funny historical anecdote from the Tudor era involving the &quot;Bailiff of Yarmouth&quot; is the tale of a 16th-century English law officer who attempted to impress King Henry VIII by presenting him with a magnificent pie. The pie was supposed to contain a dwarf, who would pop out to entertain the king. However, when the pie was opened, it was revealed that the dwarf had consumed all the food inside while hiding, leaving the king and his court in fits of laughter at the unexpected turn of events. This incident highlights the colorful and eccentric nature of the Tudor court. You could have been that officer...</tw-passagedata><tw-passagedata pid="25" name="Just as an observer" tags="" position="1000,300" size="100,100">They will still shout at you, especially if you are wearing a fine Tudor era suit. They just want to sell. By the way, check to see if anything is missing from your home and make sure to buy it.</tw-passagedata></tw-storydata>
+</tw-passagedata><tw-passagedata pid="23" name="Hanseatic League" tags="" position="850,675" size="100,100">If you would chose to be part of the Hanseatic League you need to know that this organization was a powerful medieval commercial and defensive confederation formed by merchant guilds and towns in Northern Europe. Active from the 13th to the 17th century, it facilitated trade, established trade routes, and protected members&#39; interests. The league played a significant role in the economic and political history of the region. It included cities from what are now modern-day Germany, the Netherlands, Sweden, Denmark, Norway, and other northern European areas. It was not associated with or based in Britain</tw-passagedata><tw-passagedata pid="24" name="Bailiff of Yarmouth" tags="" position="975,675" size="100,100">An funny historical anecdote from the Tudor era involving the &quot;Bailiff of Yarmouth&quot; is the tale of a 16th-century English law officer who attempted to impress King Henry VIII by presenting him with a magnificent pie. The pie was supposed to contain a dwarf, who would pop out to entertain the king. However, when the pie was opened, it was revealed that the dwarf had consumed all the food inside while hiding, leaving the king and his court in fits of laughter at the unexpected turn of events. This incident highlights the colorful and eccentric nature of the Tudor court. You could have been that officer...</tw-passagedata><tw-passagedata pid="25" name="Just as an observer" tags="" position="1025,250" size="100,100">They will still shout at you, especially if you are wearing a fine Tudor era suit. They just want to sell. By the way, check to see if anything is missing from your home and make sure to buy it.</tw-passagedata><tw-passagedata pid="26" name="Hanseatic League Dispute" tags="" position="550,800" size="100,100">You&#39;ve chosen to explore the Hanseatic League dispute. As you delve deeper into the historical records, you discover that the trade dispute was eventually resolved through diplomatic negotiations in 1539. The trade relationship between England and the Hanseatic League was restored.
+
+(set: $tradeDisputeResolved to true)
+
+(link: &quot;Return to Trade Battles&quot;)[
+  (go-to: &quot;Trade Battles&quot;)
+]</tw-passagedata><tw-passagedata pid="27" name="Cloth of Gold Summit" tags="" position="662.5,800" size="100,100">You&#39;ve decided to focus on Henry&#39;s promotion of England&#39;s textile prowess during the &quot;Cloth of Gold&quot; summit. As you read more about this event, you learn that Henry&#39;s efforts successfully promoted the English woolen industry. England&#39;s textiles gained prominence, and it became known for its quality woolen goods.
+
+(set: $promoteTextile to true)
+
+(link: &quot;Return to Trade Battles&quot;)[
+  (go-to: &quot;Trade Battles&quot;)
+]</tw-passagedata><tw-passagedata pid="28" name="Skip and continue" tags="" position="800,800" size="100,100">(link: &quot;Return to Trade Battles&quot;)[
+  (go-to: &quot;Trade Battles&quot;)
+]</tw-passagedata><tw-passagedata pid="29" name="InterestedInJewelry" tags="" position="1025,825" size="100,100">You express interest in jewelry, and a trader presents a beautiful gemstone necklace. The price is steep, but it&#39;s exquisite. Will you make the purchase?
+
+[[Buy the necklace-&gt;BuyNecklace]]
+Or continue exploring by
+(link: &quot;Returning to Introduction&quot;)[
+  (go-to: &quot;Introduction&quot;)
+]
+</tw-passagedata><tw-passagedata pid="30" name="NotInterested" tags="" position="1150,725" size="100,100">You&#39;re not interested in jewelry, and you continue exploring by (link: &quot;going to Stall Alley&quot;)[
+  (go-to: &quot;Stall Alley&quot;)
+]</tw-passagedata><tw-passagedata pid="31" name="BuyNecklace" tags="" position="1150,875" size="100,100">You decide to buy the necklace. It&#39;s a stunning addition to your collection.
+
+(set: $purchaseMade to true)
+
+Return back to the (link: &quot;Buyer&quot;)[
+  (go-to: &quot;Buyer&quot;) 
+] passage</tw-passagedata><tw-passagedata pid="32" name="Yes, I&#39;m interested in crafts and guilds" tags="" position="75,325" size="100,100">You, [($playerName)], express interest in crafts and guilds. A local guild offers you an apprenticeship. Will you join?
+
+[Join the guild]-&gt;[[JoinGuild]]
+Decline and continue exploring-&gt;[[ContinueExploring]]</tw-passagedata><tw-passagedata pid="33" name="No, I&#39;m not interested" tags="" position="175,500" size="100,100">You, [($playerName)], are not interested in crafts or guilds, and you continue your exploration.
+</tw-passagedata><tw-passagedata pid="34" name="JoinGuild" tags="" position="50,550" size="100,100">You, [($playerName)], decide to join the local guild and embark on a journey of craftsmanship.
+(link: &quot;Return to Merchant&quot;)[
+  (go-to: &quot;Merchant&quot;)
+]</tw-passagedata><tw-passagedata pid="35" name="ContinueExploring" tags="" position="-100,575" size="100,100"></tw-passagedata><tw-passagedata pid="36" name="ExploreMerchantCourt" tags="" position="325,825" size="100,100">You, [($playerName)], decide to explore Merchant&#39;s Court, delving into the world of legal matters and commerce. 
+
+Here are some unique facts for you:
+
+Tudor England&#39;s merchant courts were vital centers of trade and justice. These courts spanned the nation, each with its rules, shaping the Tudor legal landscape. They emerged from medieval traditions but adapted to handle commercial disputes more effectively. Merchant court judges specialized in trade matters, ensuring informed decisions. These courts addressed not only legal disputes but also trade regulations, contracts, debts, and goods&#39; quality. They encouraged arbitration, speeding up resolutions. Merchant courts laid the groundwork for the &quot;Law Merchant,&quot; which still influences modern commercial law and international trade practices. Their historical records provide an invaluable window into Tudor trade, customs, and the emergence of modern business law.</tw-passagedata><tw-passagedata pid="37" name="ChooseVoyage" tags="" position="525,600" size="100,100">Do you want to join John Cabot on the &quot;Matthew&quot; or sail aboard the Mayflower to the New World, [$playerName]?
+
+ (link: &quot;Join John Cabot on the &#39;Matthew&#39;&quot;)[
+    (set: $chosenVoyage to &quot;Cabot&quot;)
+    (go-to: &quot;CabotVoyage&quot;) [[CabotVoyage]]
+    
+]
+(link: &quot;Sail aboard the Mayflower&quot;)[
+    (set: $chosenVoyage to &quot;Mayflower&quot;)
+    (go-to: &quot;MayflowerVoyage&quot;)  [[MayflowerVoyage]]
+]
+</tw-passagedata><tw-passagedata pid="38" name="CabotVoyage" tags="" position="450,975" size="100,100">John Cabot&#39;s 1497 voyage under the English flag led him to Newfoundland, Canada, but he mistakenly believed he&#39;d discovered Asia. This voyage marked England&#39;s early New World exploration.</tw-passagedata><tw-passagedata pid="39" name="MayflowerVoyage" tags="" position="600,975" size="100,100">The Mayflower voyage in 1620 carried 102 passengers, including &quot;Saints&quot; fleeing religious persecution and &quot;Strangers&quot; seeking adventure. This historic journey marked the Pilgrims&#39; pursuit of a new start in America.</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
